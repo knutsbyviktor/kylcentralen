@@ -1,0 +1,68 @@
+<style type="text/css">
+    nav {
+        background-color: whitesmoke;
+    }
+    
+    nav a.active {
+        background-color: aquamarine;
+    }
+    
+    nav a {
+        /*line-height: 20px;*/
+        opacity: 1;
+        /*padding: 10px;*/
+        /*border: 1px solid black;*/
+        /*background: white;*/
+    }
+
+    nav a.ng-hide-add, nav a.ng-hide-remove {
+        transition: all linear 0.5s;
+    }
+
+    nav a.ng-hide {
+        /*line-height: 0;*/
+        opacity: 0;
+        /*padding: 0 10px;*/
+    }
+
+    @media only screen and (min-width: 769px) {
+        nav {
+            /*display: inline-block;*/
+            padding-left: 30px;
+        }
+
+        nav a {
+            display: inline-block;
+            /*margin: 10px;*/
+            font-size: 1.2em;
+            background-color: tomato;
+            padding: 10px;
+        }
+        
+        nav a:first-of-type {
+            display: none;
+        }
+    }
+
+    @media only screen and (max-width: 768px) {        
+        nav a {
+            border-bottom: 1px solid black;
+            display: block;
+            font-size: 1.2em;
+            background-color: tomato;
+            padding: 15px;
+        }
+        
+        nav a:first-of-type {
+            font-size: 30px;
+        }
+    }
+</style>
+
+<nav>
+    <a ng-click="_toggleNavigation()">&#9776;&nbsp;</a>
+    <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/')}" href="#/">Kylcentralen</a>
+    <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/kontakt')}" href="#/kontakt">Kontakt</a>
+    <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/js')}" href="#/js/">JavaScript</a>
+    <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/jquery')}" href="#/jquery/">jQuery</a>
+</nav>
