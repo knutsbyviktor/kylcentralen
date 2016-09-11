@@ -1,6 +1,6 @@
 <style type="text/css">
     nav {
-        background-color: whitesmoke;
+        /*background-color: whitesmoke;*/
     }
     
     nav a.active {
@@ -44,7 +44,7 @@
         }
     }
 
-    @media only screen and (max-width: 768px) {        
+    @media only screen and (max-width: 768px) {
         nav a {
             border-bottom: 1px solid black;
             display: block;
@@ -61,7 +61,7 @@
 
 <nav>
     <a ng-click="_toggleNavigation()">&#9776;&nbsp;</a>
-    <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/')}" href="#/">Kylcentralen</a>
+    <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/')}" href="#/">{{appName}}</a>
     <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/kontakt')}" href="#/kontakt">Kontakt</a>
     <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/js')}" href="#/js/">JavaScript</a>
     <a ng-click="_navigate()" ng-show="navigationOpen" ng-class="{ active: isActive('/jquery')}" href="#/jquery/">jQuery</a>

@@ -1,0 +1,10 @@
+{
+    "elements": {
+        "kylcentralen-navbar": {}
+    },
+    "attributes": {
+        "integrity": {
+            "context": "link"
+        }
+    }
+}

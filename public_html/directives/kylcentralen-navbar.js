@@ -1,9 +1,6 @@
 app.directive("kylcentralenNavbar", ['$log', '$location', '$window', function($log, $location, $window) {
     return {
         restrict: 'E',
-        scope: {
-            
-        }, 
         templateUrl: "./templates/navbar.html",
         link: function($scope, $attr, $elem) {                            
             $scope.isActive = function (viewLocation) { 

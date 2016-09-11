@@ -6,9 +6,7 @@ and open the template in the editor.
 -->
 <html lang="sv" ng-app="app" ng-cloak>
     <head>
-        <title>Kylcentralen</title>
-        
-        <link rel="shortcut icon" href="">
+        <title>{{appName}}</title>
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -30,7 +28,8 @@ and open the template in the editor.
             var app = angular.module('app', ['ngRoute', 'ngAnimate']);
             
             app.run(function($rootScope, $location){
-               console.log("Angular app started!") 
+                $rootScope.appName = "KylCentralen";
+                console.log("Angular app started!") 
             });
             
             app.config(function($routeProvider){
@@ -56,27 +55,19 @@ and open the template in the editor.
             });
         </script>
         
-        <style type="text/css">
-            body {
-                margin: 0px;
-                font-family: 'Source Sans Pro', sans-serif;
-            }
-            
-            a {
-                text-decoration: none;
-                color: inherit
-            }
-            
-            .content-padding {
-                padding-left: 10px;
-                padding-right: 10px;
-            }
-        </style>
-        
         <script type="text/javascript" src="./directives/kylcentralen-navbar.js"></script>
+        
+        <link rel="stylesheet" type="text/css" href="./css/main.css">
     </head>
     <body>
+        <h1 id="main-header">{{appName}}</h1>
         <kylcentralen-navbar></kylcentralen-navbar>
-        <div ng-view></div>
+        <div id="ng-view" ng-view></div>
+        <footer>
+            <p>
+                Vi är certifierad av Incert och utgår från svensk kylnorm både teoretiskt och praktiskt
+            </p>
+            <img src="img/incert_company_certification_168px.png" alt="Incert F&ouml;retagscertifiering" />
+        </footer>
     </body>
 </html>
