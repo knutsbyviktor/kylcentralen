@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html lang="sv" ng-app="app" ng-cloak>
     <head>
-        <title>{{appName}}</title>
+        <title>KylCentralen</title>
         
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -27,9 +27,9 @@ and open the template in the editor.
         <script type="text/javascript">
             var app = angular.module('app', ['ngRoute', 'ngAnimate']);
             
-            app.run(function($rootScope, $location){
+            app.run(function($rootScope, $location, $window, $timeout){
                 $rootScope.appName = "KylCentralen";
-                console.log("Angular app started!") 
+                console.log("Angular app started!");
             });
             
             app.config(function($routeProvider){
@@ -37,17 +37,17 @@ and open the template in the editor.
                     when('/', {
                         templateUrl: './views/welcome.html'
                     }).
-                    when('/kontakt', {
+                    when('/cooling', {
+                        templateUrl: './views/cooling.html'
+                    }).
+                    when('/heat-pumps', {
+                        templateUrl: './views/heat-pumps.html'
+                    }).
+                    when('/agreement-cooling-heat', {
+                        templateUrl: './views/agreement-cooling-heat.html'
+                    }).
+                    when('/contact', {
                         templateUrl: './views/contact.html'
-                    }).
-                    when('/order-history', {
-                        templateUrl: './views/orders/order-history.jsp'
-                    }).
-                    when('/my-shop', {
-                        templateUrl: './views/shop/my-shop.jsp'
-                    }).
-                    when('/personal-information', {
-                        templateUrl: './views/personal-information/personal-information.jsp'
                     }).
                     otherwise({
                         redirectTo: '/'
@@ -56,18 +56,29 @@ and open the template in the editor.
         </script>
         
         <script type="text/javascript" src="./directives/kylcentralen-navbar.js"></script>
+        <script type="text/javascript" src="./directives/kylcentralen-full-screen-element.js"></script>
         
         <link rel="stylesheet" type="text/css" href="./css/main.css">
     </head>
     <body>
-        <h1 id="main-header">{{appName}}</h1>
-        <kylcentralen-navbar></kylcentralen-navbar>
-        <div id="ng-view" ng-view></div>
+        <header>
+            <h1 id="main-header">{{appName}}</h1>
+            <kylcentralen-navbar></kylcentralen-navbar>
+        </header>
+        <div id="main-content" class="content-wrapper">
+            <div id="ng-view" kylcentralen-full-screen-element ng-view></div>
+        </div>
         <footer>
-            <p>
-                Vi är certifierad av Incert och utgår från svensk kylnorm både teoretiskt och praktiskt
-            </p>
-            <img src="img/incert_company_certification_168px.png" alt="Incert F&ouml;retagscertifiering" />
+            <div>
+                <p>KylCentralen.se</p>
+            </div>
+            <div>
+                <p>KylCentralen.se</p>
+            </div>
+            <div>
+                <p>KylCentralen.se</p>
+                <img src="img/incert_company_certification_168px.png" alt="Incert F&ouml;retagscertifiering" />
+            </div>
         </footer>
     </body>
 </html>

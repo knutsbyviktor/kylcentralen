@@ -1,5 +1,12 @@
-body {
+html{ 
+    padding: 0px;
     margin: 0px;
+} 
+
+body {
+    padding: 0px;
+    margin: 0px;
+    /*background-color: #FFCC00;*/
     font-family: 'Source Sans Pro', sans-serif;
 }
 
@@ -32,7 +39,8 @@ h3 {
     }
 }
 
-#ng-view {
+.content-wrapper {
+    /*display: inline-block;*/
     margin: auto;
     max-width: 1004px; /* 1024 - 20 padding (from content-padding)*/
 }
@@ -42,12 +50,58 @@ h3 {
     padding-right: 10px;
 }
 
+[ng\:cloak], [ng-cloak], .ng-cloak {
+  display: none !important;
+}
+
+#ng-view {
+    width: 100%;
+    display: inline-block;
+}
+
 .italic {
     font-style: italic;
+}
+
+.text-info {
+    /*font-size: 1.1em;*/
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
 }
 
 span.sub-header {
     color: #555;
     font-weight: normal;
     font-size: 0.8em;
+}
+
+header {
+    display: inline-block;
+    width: 100%;
+}
+
+footer {
+    display: flex;
+    align-items: center;
+}
+
+footer div {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media only screen and (min-width: 769px) {
+    footer {
+        flex-direction: row;
+    }   
+}
+
+@media only screen and (max-width: 768px) {
+    footer {
+        flex-direction: column;
+    }
 }
