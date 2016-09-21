@@ -19,13 +19,13 @@ h3 {
     font-weight: normal;
 }
 
-@media only screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
     #main-header {
         margin-left: 30px;
     }
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #main-header {
         margin-left: 30px;
     }
@@ -94,13 +94,13 @@ footer div {
     flex-direction: column;
 }
 
-@media only screen and (min-width: 769px) {
+@media screen and (min-width: 769px) {
     footer {
         flex-direction: row;
     }   
 }
 
-@media only screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
     footer {
         flex-direction: column;
     }
