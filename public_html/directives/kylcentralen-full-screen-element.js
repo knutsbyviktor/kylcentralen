@@ -35,7 +35,7 @@ app.directive("kylcentralenFullScreenElement", ['$log', '$location', '$window', 
 
                         var ngView = angular.element(document.querySelector('#main-content'));
                         
-                        var elemHeight = innerHeight - (headerHeight + footerHeight);
+                        var elemHeight = innerHeight - (headerHeight + footerHeight + 3);///+3 is the last divider
 //                        alert(elemHeight)
                         if(ngView[0].clientHeight < elemHeight) {
                             ngView.css("height", elemHeight + "px");

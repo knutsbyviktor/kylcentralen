@@ -56,18 +56,24 @@ and open the template in the editor.
         </script>
         
         <script type="text/javascript" src="./directives/kylcentralen-navbar.js"></script>
+        <script type="text/javascript" src="./directives/kylcentralen-divider.js"></script>
         <script type="text/javascript" src="./directives/kylcentralen-full-screen-element.js"></script>
         
         <link rel="stylesheet" type="text/css" href="./css/main.css">
     </head>
     <body>
         <header>
-            <h1 id="main-header">{{appName}}</h1>
+            <div id="main-header">
+                <img src="img/kyl_centralen_logo.png" alt="Logotyp" />
+                <h1>{{appName}}</h1>
+            </div>
             <kylcentralen-navbar></kylcentralen-navbar>
+            <kylcentralen-divider></kylcentralen-divider>
         </header>
         <div id="main-content" class="content-wrapper">
             <div id="ng-view" kylcentralen-full-screen-element ng-view></div>
         </div>
+        <kylcentralen-divider></kylcentralen-divider>
         <footer>
             <div>
                 <p>KylCentralen.se</p>
@@ -76,7 +82,7 @@ and open the template in the editor.
                 <p>KylCentralen.se</p>
             </div>
             <div>
-                <p>KylCentralen.se</p>
+                <p>Vi är certifierad av Incert och utgår från svensk kylnorm både teoretiskt och praktiskt</p>
                 <img src="img/incert_company_certification_168px.png" alt="Incert F&ouml;retagscertifiering" />
             </div>
         </footer>

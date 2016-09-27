@@ -1,3 +1,9 @@
+/*
+    #4b9ec9 - primary color
+    #9dcbe2 - supporting color
+
+    #c9764b - complementary color
+*/
 html{ 
     padding: 0px;
     margin: 0px;
@@ -19,17 +25,36 @@ h3 {
     font-weight: normal;
 }
 
+#main-content {
+
+}
+
+header {
+    /*background-color: #f3f3f3;*/
+}
+
+#main-header {
+    
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+#main-header img {
+    width: auto;
+}
+
 @media screen and (min-width: 769px) {
-    #main-header {
-        margin-left: 30px;
+    #main-header img {
+        height: 100px;
     }
 }
 
 @media screen and (max-width: 768px) {
-    #main-header {
-        margin-left: 30px;
+    #main-header img {
+        height: 80px;
     }
-    
+
     span.sub-header {
         display: block;
     }
@@ -83,6 +108,7 @@ header {
 }
 
 footer {
+    background-color: #9dcbe2;
     display: flex;
     align-items: center;
 }
