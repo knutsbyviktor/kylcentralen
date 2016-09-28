@@ -37,11 +37,11 @@ app.directive("kylcentralenFullScreenElement", ['$log', '$location', '$window', 
                         
                         var elemHeight = innerHeight - (headerHeight + footerHeight + 3);///+3 is the last divider
 //                        alert(elemHeight)
-                        console.log(ngView)
+                        console.log(ngView[0].clientHeight)
                         console.log("elemHeight: " + elemHeight)
-//                        if(ngView[0].clientHeight < elemHeight) {
+                        if(ngView[0].clientHeight < elemHeight) {
                             ngView.css("height", elemHeight + "px");
-//                        }
+                        }
                     }, 100);
                 }
             }
