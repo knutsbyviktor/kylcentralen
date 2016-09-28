@@ -33,13 +33,15 @@ app.directive("kylcentralenFullScreenElement", ['$log', '$location', '$window', 
 
 //                        console.log(innerHeight + " - " + "(" + headerHeight + " + " + footerHeight + ")");
 
-                        var ngView = angular.element(document.querySelector('#main-content'));
+                        var ngView = angular.element(document.querySelector('#ng-view'));
                         
                         var elemHeight = innerHeight - (headerHeight + footerHeight + 3);///+3 is the last divider
 //                        alert(elemHeight)
-                        if(ngView[0].clientHeight < elemHeight) {
+                        console.log(ngView)
+                        console.log("elemHeight: " + elemHeight)
+//                        if(ngView[0].clientHeight < elemHeight) {
                             ngView.css("height", elemHeight + "px");
-                        }
+//                        }
                     }, 100);
                 }
             }
