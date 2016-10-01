@@ -43,6 +43,11 @@ app.directive("kylcentralenFullScreenElement", ['$log', '$location', '$window', 
                             ngView.css("height", elemHeight + "px");
                         }
                     }, 100);
+                } else {
+                    $timeout(function () {
+                        var ngView = angular.element(document.querySelector('#ng-view'));
+                        ngView.css('height', null);
+                    }, 100);
                 }
             }
         }

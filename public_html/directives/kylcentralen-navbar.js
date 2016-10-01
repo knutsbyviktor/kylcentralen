@@ -14,6 +14,9 @@ app.directive("kylcentralenNavbar", ['$log', '$location', '$window', function($l
             $scope._navigate = function() {
                 if($window.innerWidth <= 768) {
                     $scope.navigationOpen = false;
+                    
+                    var headerHeight = angular.element(document).find("header")[0].clientHeight;
+                    $window.scrollTo(0, headerHeight);
                 }
             };
             

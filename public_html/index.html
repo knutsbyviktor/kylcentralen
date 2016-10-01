@@ -6,7 +6,11 @@ and open the template in the editor.
 -->
 <html lang="sv" ng-app="app" ng-cloak>
     <head>
-        <title>KylCentralen</title>
+        <title>KylCentralen - allt inom kyla och Värme</title>
+        
+        <meta name="description=" content="Vi på KylCentralen installerar, felsöker samt gör service av kyl & 
+              värmeanläggningar, både små och stora alternativ. Våra områden är Mora, Orsa, Älvdalen, Rättvik,
+              Vansbro och Malung-Sälen">
         
         <meta charset="UTF-8">
         <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
@@ -37,16 +41,16 @@ and open the template in the editor.
                     when('/', {
                         templateUrl: './views/welcome.html'
                     }).
-                    when('/cooling', {
+                    when('/kyla', {
                         templateUrl: './views/cooling.html'
                     }).
                     when('/heat-pumps', {
                         templateUrl: './views/heat-pumps.html'
                     }).
-                    when('/agreement-cooling-heat', {
+                    when('/avtal', {
                         templateUrl: './views/agreement-cooling-heat.html'
                     }).
-                    when('/contact', {
+                    when('/kontakt', {
                         templateUrl: './views/contact.html'
                     }).
                     otherwise({
@@ -64,8 +68,8 @@ and open the template in the editor.
     <body>
         <header>
             <div id="main-header">
-                <img src="img/kyl_centralen_logo.png" alt="Logotyp" />
-                <h1>{{appName}}</h1>
+                <a ng-click="_navigate()" href="#/"><img src="img/kyl_centralen_logo.png" alt="Logotyp" /></a>
+                <a ng-click="_navigate()" href="#/"><h1>{{appName}}</h1></a>
             </div>
             <kylcentralen-navbar></kylcentralen-navbar>
             <kylcentralen-divider></kylcentralen-divider>
@@ -74,16 +78,13 @@ and open the template in the editor.
             <div id="ng-view" kylcentralen-full-screen-element ng-view></div>
         </div>
         <kylcentralen-divider></kylcentralen-divider>
-        <footer>
+        <footer class="kylcentralen-flex">
             <div>
-                <p>KylCentralen.se</p>
-            </div>
-            <div>
-                <p>KylCentralen.se</p>
+                <a ng-click="_navigate()" href="#/"><h4>{{appName}}</h4></a>
             </div>
             <div>
                 <p>Vi är certifierad av Incert och utgår från svensk kylnorm både teoretiskt och praktiskt</p>
-                <img src="img/incert_company_certification_168px.png" alt="Incert F&ouml;retagscertifiering" />
+                <img src="img/incert_company_certification_168px.png" alt="Incert Företagscertifiering" />
             </div>
         </footer>
     </body>

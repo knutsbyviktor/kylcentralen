@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+	<url>
+		<loc>http://www.kylcentralen.se</loc> 
+		<image:image>
+			<image:loc>http://www.kylcentralen.se/img/kyl_centralen_logo.png</image:loc>
+			<image:caption>Logotyp</image:caption>
+			<image:loc>http://www.kylcentralen.se/img/incert_company_certification_168px.png</image:loc>
+		<image:caption>Incert Företagscertifiering</image:caption>
+		</image:image>
+	</url>
+    <url>
+		<loc>http://www.kylcentralen.se/kyla</loc> 
+		<image:image>
+			<image:loc>http://www.kylcentralen.se/img/kyl_centralen_logo.png</image:loc>
+			<image:caption>Logotyp</image:caption>
+			<image:loc>http://www.kylcentralen.se/img/incert_company_certification_168px.png</image:loc>
+			<image:caption>Incert Företagscertifiering</image:caption>
+		</image:image>
+	</url>
+</urlset>
