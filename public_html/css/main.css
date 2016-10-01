@@ -107,27 +107,57 @@ header {
     width: 100%;
 }
 
-footer {
+.kylcentralen-flex {
     /*background-color: #9dcbe2;*/
     display: flex;
     align-items: center;
+    /*justify-content: space-around*/
 }
 
-footer div {
+.kylcentralen-flex div {
     display: flex;
+    padding: 10px;
     flex-grow: 1;
+
     align-items: center;
     flex-direction: column;
+    /*justify-content: space-around*/
+}
+
+/*.kylcentralen-flex a {
+    display: flex;
+    align-items: center;
+}*/
+
+.kylcentralen-flex img:not(.kylcentralen-flex-item-img-lg) {
+    margin: auto;
+    display: inherit;
+    max-width: 80%;
+    max-height: 256px; 
+    width: auto;
+}
+
+.kylcentralen-flex-item-align-left {
+    align-items: flex-start !important;
 }
 
 @media screen and (min-width: 769px) {
-    footer {
+    .kylcentralen-flex {
         flex-direction: row;
     }   
+    
+    .kylcentralen-flex div {
+        /* http://stackoverflow.com/questions/25066214/flexbox-not-giving-equal-width-to-elements */
+        flex-basis: 0;
+    }
 }
 
 @media screen and (max-width: 768px) {
-    footer {
+    .kylcentralen-flex {
         flex-direction: column;
+    }
+    
+    .kylcentralen-flex-item-img-lg {
+        max-width: 80%;
     }
 }
