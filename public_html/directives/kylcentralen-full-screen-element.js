@@ -5,7 +5,11 @@ app.directive("kylcentralenFullScreenElement", ['$log', '$location', '$window', 
             var innerHeight = 0;
             
              $scope.$on('$routeChangeSuccess', function () {
-                 resizeElem();
+                 $timeout(function() {
+                    
+                 }, 500);
+                 
+                 resizeElem(); 
              });
             
             angular.element($window).on('resize', function(){
@@ -37,12 +41,12 @@ app.directive("kylcentralenFullScreenElement", ['$log', '$location', '$window', 
                         
                         var elemHeight = innerHeight - (headerHeight + footerHeight + 3);///+3 is the last divider
 //                        alert(elemHeight)
-//                        console.log(ngView[0].clientHeight)
-//                        console.log("elemHeight: " + elemHeight)
+                        console.log(ngView[0].clientHeight)
+                        console.log("elemHeight: " + elemHeight)
                         if(ngView[0].clientHeight < elemHeight) {
                             ngView.css("height", elemHeight + "px");
                         }
-                    }, 100);
+                    }, 300);
                 } else {
                     $timeout(function () {
                         var ngView = angular.element(document.querySelector('#ng-view'));

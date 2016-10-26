@@ -74,18 +74,21 @@ and open the template in the editor.
             <kylcentralen-navbar></kylcentralen-navbar>
             <kylcentralen-divider></kylcentralen-divider>
         </header>
-        <div id="main-content" class="content-wrapper">
-            <div id="ng-view" kylcentralen-full-screen-element ng-view></div>
-        </div>
-        <kylcentralen-divider></kylcentralen-divider>
-        <footer class="kylcentralen-flex">
-            <div>
-                <a ng-click="_navigate()" href="#/"><h4>{{appName}}</h4></a>
+        <!--<div id="wrapper">-->
+            <div id="main-content" class="content-wrapper">
+                <div id="ng-view" ng-view></div><!-- kylcentralen-full-screen-element -->
             </div>
-            <div>
-                <p>Vi är certifierad av Incert och utgår från svensk kylnorm både teoretiskt och praktiskt</p>
-                <img src="img/incert_company_certification_168px.png" alt="Incert Företagscertifiering" />
-            </div>
-        </footer>
+            <!--<kylcentralen-divider></kylcentralen-divider>-->
+            <!--box-shadow: 0px -10px 10px  #888888; -->
+            <footer style="color: white; background: linear-gradient(to right, #20516b , #4b9ec9);" class="kylcentralen-flex">
+                <div>
+                    <a ng-click="_navigate()" href="#/"><h4>{{appName}}</h4></a>
+                </div>
+                <div>
+                    <p>Vi är certifierad av Incert och utgår från svensk kylnorm både teoretiskt och praktiskt</p>
+                    <img src="img/incert_company_certification_168px.png" alt="Incert Företagscertifiering" />
+                </div>
+            </footer>
+        <!--</div>-->
     </body>
 </html>

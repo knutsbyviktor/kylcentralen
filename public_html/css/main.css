@@ -10,10 +10,16 @@ html{
 } 
 
 body {
+    min-height: 100vh;
     padding: 0px;
     margin: 0px;
     /*background-color: #FFCC00;*/
     font-family: 'Source Sans Pro', sans-serif;
+    
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
 }
 
 a {
@@ -26,7 +32,29 @@ h3 {
 }
 
 #main-content {
+/*    display: flex;
+    flex: 1;*/
+}
 
+#ng-view {
+    transition:opacity ease-in-out 0.2s;
+}
+
+#ng-view.ng-enter, #ng-view.ng-leave {
+    /*opacity:1;*/
+/*    transition: opaticy;
+    transition-duration: 1s;
+    transition-timing-function: ease-in-out;*/
+}
+
+#ng-view.ng-enter {
+  opacity:0;
+}
+#ng-view.ng-enter.ng-enter-active {
+  opacity:1;
+}
+#ng-view.ng-leave.ng-leave-active {
+  display: none;
 }
 
 header {
@@ -103,7 +131,7 @@ span.sub-header {
 }
 
 header {
-    display: inline-block;
+    /*display: inline-block;*/
     width: 100%;
 }
 
