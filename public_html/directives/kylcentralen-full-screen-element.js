@@ -2,7 +2,7 @@ app.directive("kylcentralenFullScreenElement", ['$log', '$location', '$window', 
     return {
         restrict: 'A',
         link: function ($scope, $attr, $elem) {
-            var innerHeight = 0;
+            var innerHeight = 0, foo;
             
              $scope.$on('$routeChangeSuccess', function () {
                  $timeout(function() {

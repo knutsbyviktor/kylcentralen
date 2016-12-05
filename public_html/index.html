@@ -66,14 +66,16 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="./css/main.css">
     </head>
     <body>
-        <header>
+        <header style="max-width: 1024px; margin: auto;">
             <div id="main-header">
                 <a ng-click="_navigate()" href="#/"><img src="img/kyl_centralen_logo.png" alt="Logotyp" /></a>
                 <a ng-click="_navigate()" href="#/"><h1>{{appName}}</h1></a>
             </div>
             <kylcentralen-navbar></kylcentralen-navbar>
-            <kylcentralen-divider></kylcentralen-divider>
         </header>
+        
+        <kylcentralen-divider></kylcentralen-divider>
+        
         <!--<div id="wrapper">-->
             <div id="main-content" class="content-wrapper">
                 <div id="ng-view" ng-view></div><!-- kylcentralen-full-screen-element -->
